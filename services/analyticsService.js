@@ -16,7 +16,6 @@ var getTotalExpensesForAllMonths = function(userId) {
     } else if(!result) {
       deferred.reject({"status": 404, "jsonResult": {"result": "Could not find the expenses"}});
     } else {
-      console.log('result =', result);
       deferred.resolve({"status": 200, "jsonResult": {"result": result}});
     }
   });
@@ -38,7 +37,6 @@ getCategoryWiseExpensesForAMonth = function(userId, month) {
     } else if(!result) {
       deferred.reject({"status": 404, "jsonResult": {"result": "Could not find the expenses"}});
     } else {
-      console.log('result =', result);
       deferred.resolve({"status": 200, "jsonResult": {"result": result}});
     }
   });
@@ -59,7 +57,6 @@ getCategoryWiseExpensesForAllMonths = function(userId) {
     } else if(!result) {
       deferred.reject({"status": 404, "jsonResult": {"result": "Could not find the expenses"}});
     } else {
-      console.log('result =', result);
       deferred.resolve({"status": 200, "jsonResult": {"result": result}});
     }
   });

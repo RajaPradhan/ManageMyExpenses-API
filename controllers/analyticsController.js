@@ -10,7 +10,6 @@ getTotalExpensesForAllMonths = function(req, res) {
 
   analyticsService.getTotalExpensesForAllMonths(userId)
   .then(function(responseObj) {
-      console.log('responseObj', responseObj);
       sendJSONResponse(res, responseObj);
   })
   .catch(function(responseObj) {
@@ -24,7 +23,6 @@ getCategoryWiseExpensesForAMonth = function(req, res) {
 
   analyticsService.getCategoryWiseExpensesForAMonth(userId, month)
   .then(function(responseObj) {
-      console.log('responseObj', responseObj);
       sendJSONResponse(res, responseObj);
   })
   .catch(function(responseObj) {
@@ -37,7 +35,6 @@ getCategoryWiseExpensesForAllMonths = function(req, res) {
 
   analyticsService.getCategoryWiseExpensesForAllMonths(userId)
   .then(function(responseObj) {
-      console.log('responseObj', responseObj);
       sendJSONResponse(res, responseObj);
   })
   .catch(function(responseObj) {

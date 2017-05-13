@@ -16,7 +16,6 @@ var getExpensesForSpecificMonth = function(userId, month) {
     } else if(!result) {
       deferred.reject({"status": 404, "jsonResult": {"result": "Could not find the expenses"}});
     } else {
-      console.log('result =', result);
       deferred.resolve({"status": 200, "jsonResult": {"result": result}});
     }
   });
@@ -52,7 +51,6 @@ addExpense = function(expenseDetails) {
               } else if(!result) {
                 deferred.reject({"status": 404, "jsonResult": {"result": "Could not find the expenses"}});
               } else {
-                console.log('result =', result);
                 deferred.resolve({"status": 200, "jsonResult": {"result": result}});
               }
             }
@@ -68,7 +66,6 @@ addExpense = function(expenseDetails) {
               } else if(!result) {
                 deferred.reject({"status": 404, "jsonResult": {"result": "Could not find the expenses"}});
               } else {
-                console.log('result =', result);
                 deferred.resolve({"status": 200, "jsonResult": {"result": result}});
               }
             }
@@ -124,7 +121,6 @@ updateExpense = function(expenseDetails) {
 },
 
 deleteExpense = function(expenseDetails) {
-  console.log('userid=', expenseDetails);
   var deferred = q.defer(),
       userId = expenseDetails.userId,
       expenseId = expenseDetails.expenseId,
